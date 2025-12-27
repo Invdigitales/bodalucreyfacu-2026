@@ -397,5 +397,48 @@ margin-left: 52%;
   margin-left: 16%;
   margin-top: 10%;
 }
+
+
+
+ /* Contenedor redondo */
+  .music-player {
+    width: 50px;
+  height: 50px;
+  background: #6b928fa2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: float 2s ease-in-out infinite; /* movimiento arriba-abajo */
+  
+  /* Fijar arriba */
+  position: fixed;
+  top: 20px;   /* distancia desde arriba */
+  right: 70px; /* lo mantiene a la derecha */
+  z-index: 9999; /* asegura que quede por encima de todo */
+  
+  }
+
+
+  /* Botón play */
+  .play-btn {
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+   /* Animación de flotación */
+  @keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+
 }
  

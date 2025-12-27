@@ -31,7 +31,11 @@
   <div class="arrow">
     <span></span>
 </div>
+ <audio id="audio" src="./La Promesa - Melendi (Lyrics video) [w8SOcXfnQ_8].mp3"></audio>
 
+<div class="music-player" id="player">
+  <button class="play-btn" id="playBtn">𝅘𝅥𝅮</button>
+</div>
   <div class="main">
 
     <section class="cuenta-regresiva">
@@ -101,8 +105,8 @@
     <img class="anillos" src="./imagenes/iglesia.png" alt="">
     <p class="parrafo2">Ceremonia</p> 
     
-    <p class="parrafo3"> Parroquia nuestra señora del rosario. <br>
-       20.30 hs <br></p>
+    <p class="parrafo3"> Parroquia Nuestra Señora del Rosario. <br>
+       20:15 hs <br></p>
 
 
 
@@ -200,7 +204,7 @@
      <p class="parrafo6"> Adultos: $65.000 </p>
 
 <h1 class="card_card-body"> Datos para transferir tu tarjeta:
-   <br> Alias: Lucresalarin </h1>
+   <br> Alias: lucresalarin </h1>
 
 
 <br>
@@ -251,6 +255,20 @@
 
 
 
+<script>
+  const audio = document.getElementById("audio");
+  const playBtn = document.getElementById("playBtn");
+
+  playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = "❚❚"; // pausa
+    } else {
+      audio.pause();
+      playBtn.textContent = "►"; // play
+    }
+  });
+</script>
 
 
 
